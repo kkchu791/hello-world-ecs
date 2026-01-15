@@ -1,11 +1,11 @@
-
-# Use official Node.js runtime as base image
-FROM node:18-alpine
+# Use official Node.js runtime as base image with explicit platform
+FROM --platform=linux/amd64 node:18-alpine
 
 # Set working directory in container
 WORKDIR /app
 
-# Copy server file to container
+# Copy package.json and server file to container
+COPY package.json .
 COPY server.js .
 
 # Expose port 3000

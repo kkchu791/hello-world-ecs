@@ -1,0 +1,11 @@
+
+{
+    "name": "hello-world-server",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "Simple Node.js Hello World server",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    }
+  }
