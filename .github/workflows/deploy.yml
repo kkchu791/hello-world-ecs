@@ -1,3 +1,10 @@
+name: Deploy to Amazon ECS
+
+on:
+  push:
+    branches:
+      - main
+
 env:
   AWS_REGION: us-west-1
   ECR_REPOSITORY: hello-world-server
@@ -5,3 +12,12 @@ env:
   ECS_CLUSTER: hello-world-cluster
   ECS_TASK_DEFINITION: task-definition.json
   CONTAINER_NAME: hello-world-container
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
