@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
   if (req.url === '/') {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World. I was updated with CI!');
+    res.end('Shes a super freak super freak shes super freaky');
   } else {
     res.statusCode = 404;
     res.end('Not Found');
